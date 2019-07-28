@@ -1,0 +1,29 @@
+node{
+   
+    stage("stage1"){
+       
+        if(isUnix())
+        {
+            echo "unix like"
+        }
+        else
+        {
+            echo "windows like"
+        }
+       
+        
+        def list = ["Tibco Application1", "Tibco Application2", "Tibco Application3", "Tibco Application4"]
+        for(int i=0;i<list.size();++i){
+            echo "Starting Application"
+            echo list[i]   
+            //call to a sub process with parameter or code to start the application here 
+            echo "Started Application"  
+            list[i]   
+        }
+       
+        
+        
+    }
+   
+   
+}
